@@ -1,0 +1,24 @@
+RUNS 300 INPUT IMAGES  STYLE=starryNight.jpg, CONTENT=Gatys_NST_Paper_ImageA.jpg
+SIGMA =0 varied
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = FALSE
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE: only L2
+STYLE LOSS = 100,1k,10k,50k,1000k
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+
+
+THINK BEST:
+Content Loss: 101.473175 Color-Aware Loss: 40.736729 gatysStarry_1hLoss_chroma_L2-sigma-pt30.jpg
+Content Loss: 86.057037 Color-Aware Loss: 38.691120 gatysStarry_1kLoss_chroma_L2-sigma-pt30.jpg
+Content Loss: 126.706337 Color-Aware Loss: 322.644867 gatysStarry_10kLoss_chroma_L2-sigma-pt30.jpg
+Content Loss: 138.600891 Color-Aware Loss: 1777.411865 gatysStarry_50kLoss_chroma_L2-sigma-pt30.jpg
+Content Loss: 141.427673 Color-Aware Loss: 3801.382324 gatysStarry_100kLoss_chroma_L2-sigma-pt30.jpg
+
+Content Loss: 82.346008 Color-Aware Loss: 27.823980 gatysStarry_1kLoss_chroma_L2-sigma-pt35.jpg

@@ -1,0 +1,19 @@
+RUNS 300 INPUT IMAGES  STYLE=rain-princess.jpg, CONTENT=golden_gate.jpg
+SIGMA =0.4
+EPS = 1e-8
+PALETTE_SIZE = 5
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE either L2 or chroma_L2
+STYLE LOSS = large number 1k-100k
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+Content Loss: 106.003441 Color-Aware Loss: 23.891085 ggRP_1kLoss_L2.jpg
+Content Loss: 126.801682 Color-Aware Loss: 24.649368 ggRP_1kLoss_chroma_L2
+Content Loss: 163.760956 Color-Aware Loss: 97.025978 ggRP_10kLoss_L2.jpg
+Content Loss: 177.541061 Color-Aware Loss: 169.427231 ggRP_10kLoss_chroma_L2.jpg
+Content Loss: 191.895370 Color-Aware Loss: 873.931946 ggRP_100kLoss_L2.jpg
+Content Loss: 198.960861 Color-Aware Loss: 1708.145020 ggRP_100kLoss_chroma_L2.jpg

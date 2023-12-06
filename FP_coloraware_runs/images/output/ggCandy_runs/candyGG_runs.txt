@@ -1,0 +1,28 @@
+RUNS 300 INPUT IMAGES  STYLE=candy.jpg, CONTENT=golden_gate.jpg
+SIGMA =0.3 / 0.2
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = FALSE
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE either L2 or chroma_L2
+STYLE LOSS = large number 1k 
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+Content Loss: 119.984413 Color-Aware Loss: 64.889618 ggCandy_output_224size_1kLoss_L2-sigma-pt20.jpg
+Content Loss: 141.511948 Color-Aware Loss: 49.075031 ggCandy_output_224size_1kLoss_chroma_L2-sigma-pt20.jpg
+
+Content Loss: 108.750328 Color-Aware Loss: 45.776875 ggCandy_output_224size_1kLoss_L2-sigma-pt25.jpg
+****RANDOM COLORS****
+Content Loss: 139.773987 Color-Aware Loss: 67.248680 ggCandy_output_224size_1kLoss_chroma_L2-sigma-pt25.jpg
+****REPEAT ABOVE WITH 400 RUNS****
+Content Loss: 205.919083 Color-Aware Loss: 222.987808 ggCandy_output_224size_1kLoss_chroma_L2-sigma-pt25-400runs.jpg    
+
+Content Loss: 118.403221 Color-Aware Loss: 40.255520 ggCandy_output_224size_1kLoss_L2-sigma-pt30.jpg
+Content Loss: 144.154785 Color-Aware Loss: 57.893478 ggCandy_output_224size_1kLoss_chroma_L2-sigma-pt30.jpg
+
+
+

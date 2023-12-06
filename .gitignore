@@ -1,0 +1,5 @@
+/output/
+/content/
+venv
+.idea
+__pycache__

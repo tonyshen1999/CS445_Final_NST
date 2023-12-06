@@ -1,0 +1,21 @@
+RUNS 300 INPUT IMAGES  STYLE=theShipwreck.jpg, CONTENT=Gatys_NST_Paper_ImageA.jpg
+SIGMA = 0.35
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = FALSE
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE: either L2 or chroma_L2
+STYLE LOSS = 100,1k,10k,50k,100k
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+
+THINK BEST:
+Content Loss: 8.439619 Color-Aware Loss: 5.460757 gatysShipwreck_1hLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 20.326246 Color-Aware Loss: 8.918020 gatysShipwreck_1kLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 37.437614 Color-Aware Loss: 40.205734 gatysShipwreck_10kLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 53.734558 Color-Aware Loss: 163.633148 gatysShipwreck_50kLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 58.152939 Color-Aware Loss: 328.810364 gatysShipwreck_100kLoss_chroma_L2-sigma-pt35.jpg

@@ -1,0 +1,32 @@
+RUNS 300 INPUT IMAGES  STYLE=theShipwreck.jpg, CONTENT=golden_gate.jpg
+SIGMA =0.3 / 0.2
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = FALSE
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE either L2 or chroma_L2
+STYLE LOSS = large number 1k 
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+Content Loss: 39.364639 Color-Aware Loss: 61.298908 ggShipwreck_1kLoss_L2-sigma-pt20.jpg
+Content Loss: 47.206352 Color-Aware Loss: 38.326820 ggShipwreck_1kLoss_chroma_L2-sigma-pt20.jpg
+
+Content Loss: 38.364944 Color-Aware Loss: 31.862602 ggShipwreck_1kLoss_L2-sigma-pt25.jpg
+Content Loss: 38.668224 Color-Aware Loss: 19.326221 ggShipwreck_1kLoss_chroma_L2-sigma-pt25.jpg 
+
+Content Loss: 38.234478 Color-Aware Loss: 22.766344 ggShipwreck_1kLoss_L2-sigma-pt30.jpg
+Content Loss: 37.152061 Color-Aware Loss: 16.301445 ggShipwreck_1kLoss_chroma_L2-sigma-pt30.jpg
+
+Content Loss: 36.652256 Color-Aware Loss: 16.458092 ggShipwreck_1kLoss_L2-sigma-pt35.jpg
+Content Loss: 37.239868 Color-Aware Loss: 15.954889 ggShipwreck_1kLoss_chroma_L2-sigma-pt35.jpg
+
+Additional Run at .35 and 50K loss to match Gatys FigA:  ** TOO MUCH LOSS OF BRIDGE
+Content Loss: 111.878044 Color-Aware Loss: 319.668152 ggShipwreck_50kLoss_chroma_L2-sigma-pt35
+Try a Run at .35 and 10K loss:
+Content Loss: 73.910873 Color-Aware Loss: 86.156296 ggShipwreck_10kLoss_chroma_L2-sigma-pt35
+Try a Run at .35 and 5K loss:
+Content Loss: 61.124249 Color-Aware Loss: 43.151592 ggShipwreck_5kLoss_chroma_L2-sigma-pt35
