@@ -5,18 +5,19 @@ import numpy as np
 from stylize import stylize
 
 STYLE_MODEL_PATHS = {
-                     "starry-relu3": "models/epoch_2_Tue_Dec__5_21-26-13_2023_100000.0_10000000000.0.model",
-                     "picasso-relu3":"models/epoch_2_Tue_Dec__5_22-45-29_2023_100000.0_10000000000.0.model",
-                     "mosaic-relu3":"models/epoch_2_Tue_Dec__5_23-30-31_2023_100000.0_10000000000.0.model",
-                     "mosaic": "models/epoch_1_Fri_Dec__1_15-20-09_2023_100000.0_10000000000.0.model",
-                     "starry": "models/epoch_1_Mon_Dec__4_10-25-52_2023_100000.0_10000000000.0.model",
-                     "picasso": "models/epoch_1_Sun_Dec__3_14-35-54_2023_100000.0_10000000000.0.model"
+                     "starry-relu3": "models/starry_relu3_epoch2.model",
+                     "mosaic-relu3": "models/mosaic_relu3_epoch2.model",
+                     "picasso-relu3": "models/picasso_relu3_epoch2.model",
+                     "mosaic": "models/mosaic_relu2_epoch1.model",
+                     "starry": "models/starry_relu2_epoch1.model",
+                     "picasso": "models/picasso_relu2_epoch1.model"
                     }
 
 CONTENT_PATH = "content/"
 OUTPUT_PATH = "output/"
-INPUT_VIDEO_PATH = "emotional.mp4" # update this to the content video to apply NST
-OUTPUT_VIDEO_PATH = "emotional_relu3_output.mp4"
+INPUT_VIDEO_PATH = "no_god.mp4" # update this to the content video to apply NST
+OUTPUT_VIDEO_PATH = "no_god_output_starry_relu3.mp4"
+STYLE_MODEL = STYLE_MODEL_PATHS["starry-relu3"]
 
 # write a numpy array of images into mp4
 def vidwrite_from_numpy(output_video_path, np_images, fps = 30):
@@ -110,9 +111,9 @@ def load_images_np(directory_path):
     return np_images
 
 
-video2imageFolder(INPUT_VIDEO_PATH, CONTENT_PATH)  # convert video to images and save all frames to content folder
+# video2imageFolder(INPUT_VIDEO_PATH, CONTENT_PATH)  # convert video to images and save all frames to content folder
 print("running NST")
-stylize(STYLE_MODEL_PATHS["starry"], CONTENT_PATH, OUTPUT_PATH)  # stylize all images in content folder using selected model, and save to output
+stylize(STYLE_MODEL, CONTENT_PATH, OUTPUT_PATH)  # stylize all images in content folder using selected model, and save to output
 # Load frames and save as output mp4
 frames = load_images_np(OUTPUT_PATH)
 vidwrite_from_numpy(OUTPUT_VIDEO_PATH, frames)
