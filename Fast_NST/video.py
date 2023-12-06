@@ -4,11 +4,14 @@ import os
 import numpy as np
 from stylize import stylize
 
-STYLE_MODEL_PATHS = {"mosaic": "models/epoch_1_Tue_Dec__5_16-29-42_2023_100000.0_10000000000.0.model",
-                     "starry": "models/epoch_2_Tue_Dec__5_20-18-38_2023_100000.0_10000000000.0.model",
-                     "starry-Relu3": "models/epoch_2_Tue_Dec__5_21-26-13_2023_100000.0_10000000000.0.model",
-                     "picasso": "models/epoch_1_Tue_Dec__5_17-18-05_2023_100000.0_10000000000.0.model",
-                     "test":"models/epoch_1_Tue_Dec__5_18-37-00_2023_100000.0_10000000000.0.model"}
+STYLE_MODEL_PATHS = {
+                     "starry-relu3": "models/epoch_2_Tue_Dec__5_21-26-13_2023_100000.0_10000000000.0.model",
+                     "picasso-relu3":"models/epoch_2_Tue_Dec__5_22-45-29_2023_100000.0_10000000000.0.model",
+                     "mosaic-relu3":"models/epoch_2_Tue_Dec__5_23-30-31_2023_100000.0_10000000000.0.model",
+                     "mosaic": "models/epoch_1_Fri_Dec__1_15-20-09_2023_100000.0_10000000000.0.model",
+                     "starry": "models/epoch_1_Mon_Dec__4_10-25-52_2023_100000.0_10000000000.0.model",
+                     "picasso": "models/epoch_1_Sun_Dec__3_14-35-54_2023_100000.0_10000000000.0.model"
+                    }
 
 CONTENT_PATH = "content/"
 OUTPUT_PATH = "output/"

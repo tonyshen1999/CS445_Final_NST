@@ -23,11 +23,12 @@ CS445_FINAL_PROJ
   - FProj_coloraware.ipynb
   - FProjRenderImages.ipynb
 
-# Running Neural Style Transfer (slower version)
+# Running Basic Neural Style Transfer
 
-1. Under FP_coloraware_runs directory
+1. Under FP_coloraware_runs directory, run the FProj_coloraware.ipynb to generate images with NST
+2. Run FProjRenderImages.ipynb for further presentation of results
 
-# Running Fast Neural Style Transfer:
+# Running Fast Neural Style Transfer (with video style transfer):
 
 1. Under the CS445_FAST_NST directory, save an .mp4 content file in the directory.
 2. Go to the video.py file and update the VIDEO_PATH variable on line 13 to the file path of the video.
@@ -35,7 +36,5 @@ CS445_FINAL_PROJ
 4. Update the OUTPUT_VIDEO_PATH variable on line 14 to the name of the output video.
 5. Click run. It will first convert the input video to frames and save all frames in the content folder. Once all frames are saved, the stylize function will load all the frames in the content folder and apply Fast NST and save the frames to the output folder. Once all frames are processed, an .MP4 output video will be generated from all the frames in the output folder.
 6. If you want to run a Fast NST on one picture/ frame, you can just save the picture as a .jpg in the content folder (and make sure there are no other pictures that you don't want to generate). You can then comment out lines 108, 112, and 113 and only run the stylize function, which will NST the image and save the single image in the output folder.
-7. Example Content videos and Output Videos can be found in this DropBox link: https://www.dropbox.com/scl/fo/0vlez3q6guwl6dmqgt4bm/h?rlkey=96yy83r4dswevzl6c38ayxcda&dl=0
-8. Example videos can also be found on this YouTube Link: https://youtu.be/wKzhDzAvUT4
-
+7. Example Content videos and Output Videos can be found in this DropBox link: https://www.dropbox.com/scl/fo/0vlez3q6guwl6dmqgt4bm/h?rlkey=96yy83r4dswevzl6c38ayxcda&dl=0. In the outputs folder, there are output videos trained under relu2 and one output video with pretrained model with relu3.
 
