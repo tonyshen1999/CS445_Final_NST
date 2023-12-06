@@ -1,0 +1,25 @@
+RUNS 300 INPUT IMAGES  STYLE=mosaic.jpg, CONTENT=golden_gate.jpg
+SIGMA =0.3 / 0.2
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = FALSE
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE either L2 or chroma_L2
+STYLE LOSS = large number: 1k 
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+Content Loss: 141.986267 Color-Aware Loss: 68.531425 ggMo_1kLoss_L2-sigma-pt20.jpg
+Content Loss: 162.674011 Color-Aware Loss: 36.629391 ggMo_1kLoss_chroma_L2-sigma-pt20.jpg
+
+Content Loss: 145.895935 Color-Aware Loss: 45.793800 ggMo_1kLoss_L2-sigma-pt25.jpg
+Content Loss: 172.760956 Color-Aware Loss: 45.901577 ggMo_1kLoss_chroma_L2-sigma-pt25.jpg
+
+Content Loss: 152.329254 Color-Aware Loss: 40.826794 ggMo_1kLoss_L2-sigma-pt30.jpg
+Content Loss: 183.643066 Color-Aware Loss: 67.016823 ggMo_1kLoss_chroma_L2-sigma-pt30.jpg
+
+
+

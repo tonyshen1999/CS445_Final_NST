@@ -1,0 +1,23 @@
+RUNS 300 INPUT IMAGES  STYLE=theScream.jpg, CONTENT=Gatys_NST_Paper_ImageA.jpg
+SIGMA = varied
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = FALSE
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE: chroma_L2
+STYLE LOSS = 100,500,1k,10k,100k 
+CONTENT LOSS = 1 
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+
+
+THINK BEST:
+Content Loss 25.196562 Color-Aware Loss 8.336498 gatysScream_1hLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 37.775040 Color-Aware Loss: 7.845515 gatysScream_5hLoss_chroma_L2-sigma-pt35.jpg
+Content Loss 42.297508 Color-Aware Loss 9.360374 gatysScream_1kLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 64.655388 Color-Aware Loss: 41.154442 gatysScream_10kLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 81.571533 Color-Aware Loss: 385.348419 gatysScream_100kLoss_chroma_L2-sigma-pt35.jpg
+

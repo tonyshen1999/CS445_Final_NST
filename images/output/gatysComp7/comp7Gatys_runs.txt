@@ -1,0 +1,23 @@
+RUNS 300 INPUT IMAGES  STYLE=composition_VII.jpg, CONTENT=Gatys_NST_Paper_ImageA.jpg
+SIGMA = 0.35
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = FALSE
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE: either L2 or chroma_L2
+STYLE LOSS = 100,1k,10k,100k,1000k 
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+
+THINK BEST:
+Content Loss: 73.276886 Color-Aware Loss: 12.912168 gatysComp7_1hLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 90.777390 Color-Aware Loss: 15.299303 gatysComp7_5hLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 100.779434 Color-Aware Loss: 29.648376 gatysComp7_1kLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 138.765549 Color-Aware Loss: 410.802063 gatysComp7_10kLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 152.984909 Color-Aware Loss: 4817.056641 gatysComp7_100kLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 152.984909 Color-Aware Loss: 4817.056641 gatysComp7_100kLoss_chroma_L2-sigma-pt35.jpg
+Content Loss: 152.605530 Color-Aware Loss: 32272.361328 gatysComp7_1000kLoss_chroma_L2-sigma-pt35

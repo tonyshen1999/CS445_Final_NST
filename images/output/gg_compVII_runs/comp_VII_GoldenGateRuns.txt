@@ -1,0 +1,26 @@
+RUNS 300 INPUT IMAGES  STYLE=composition_VII.jpg, CONTENT=golden_gate.jpg
+SIGMA =0.4 / others
+EPS = 1e-8
+PALETTE_SIZE = 5
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+STYLE LOSS = large number 1k-100k
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+Content Loss: 82.783264 Color-Aware Loss: 25.046274 gg7_1kLoss_L2-sigma-pt40.jpg
+Content Loss: 107.356659 Color-Aware Loss: 29.972389 gg7_1kLoss_chroma_L2-sigma-pt40.jpg
+Content Loss: 127.078278 Color-Aware Loss: 156.669983  gg7_10kLoss_L2-sigma-pt40.jpg
+Content Loss: 151.802216 Color-Aware Loss: 195.658829  gg7_10kLoss_chroma_2-sigma-pt40.jpg
+Content Loss: 148.304794 Color-Aware Loss: 1790.220093 gg7_100kLoss_L2-sigma-pt40.jpg
+Content Loss: 174.222214 Color-Aware Loss: 2049.425293 gg7_1kLoss_chroma_L2-sigma-pt40.jpg
+
+
+Content Loss: 60.097252 Color-Aware Loss: 45.810535 gg7_1kLoss_L2-sigma-pt20.jpg
+Content Loss: 100.442429 Color-Aware Loss: 17.752960 gg7_1kLoss_chroma_L2-sigma-pt20.jpg
+Content Loss: 62.970291 Color-Aware Loss: 34.658501 gg7_1kLoss_L2-sigma-pt25.jpg
+Content Loss: 103.032150 Color-Aware Loss: 38.771152 gg7_1kLoss_chroma_L2-sigma-pt25.jpg
+Content Loss: 62.476143 Color-Aware Loss: 22.508101 gg7_1kLoss_L2-sigma-pt30.jpg
+Content Loss: 111.512413 Color-Aware Loss: 39.636078 gg7_1kLoss_chroma_L2-sigma-pt30.jpg

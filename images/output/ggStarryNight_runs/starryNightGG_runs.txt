@@ -1,0 +1,32 @@
+RUNS 300 INPUT IMAGES  STYLE=starryNight.jpg, CONTENT=golden_gate.jpg
+SIGMA =0.3 / 0.2
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = FALSE
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE either L2 or chroma_L2
+STYLE LOSS = large number 1k 
+CONTENT LOSS = 1-10k
+IMAGE SIZE 384
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+Content Loss: 92.017792 Color-Aware Loss: 396.621124 ggStarry_1kLoss_L2-sigma-pt20.jpg
+Content Loss: 126.887543 Color-Aware Loss: 146.545944 ggStarry_1kLoss_chroma_L2-sigma-pt20.jpg
+
+Content Loss: 143.951935 Color-Aware Loss: 2707.878662 ggStarry_1kLoss_L2-sigma-pt25.jpg
+Content Loss: 110.250153 Color-Aware Loss: 64.546768 ggStarry_1kLoss_chroma_L2-sigma-pt25.jpg
+    
+
+Content Loss: 125.762131 Color-Aware Loss: 391.091858 ggStarry_1kLoss_L2-sigma-pt30.jpg
+Content Loss: 111.671768 Color-Aware Loss: 31.256437 ggStarry_1kLoss_chroma_L2-sigma-pt30.jpg
+
+Content Loss: 121.092361 Color-Aware Loss: 73.223022 ggStarry_1kLoss_L2-sigma-pt35.jpg
+Content Loss: 112.749649 Color-Aware Loss: 45.519222 ggStarry_1kLoss_chroma_L2-sigma-pt35.jpg
+
+Try 0.30 and 3000 / 500 / 2000 around current best image:
+ggStarry_500Loss_chroma_L2-sigma-pt30.jpg
+Content Loss: 140.035202 Color-Aware Loss: 159.754868 ggStarry_3kLoss_chroma_L2-sigma-pt30.jpg
+Content Loss: 96.374191 Color-Aware Loss: 31.743809 ggStarry_2kLoss_chroma_L2-sigma-pt30
+

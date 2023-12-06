@@ -1,0 +1,26 @@
+RUNS 300 INPUT IMAGES  STYLE=udnie.jpg, CONTENT=golden_gate.jpg
+SIGMA =0.4 / 0.2
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = (TRUE OR FALSE)  t/f
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE either L2 or chroma_L2
+STYLE LOSS = large number 1k-100k
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+Content Loss: 48.149590 Color-Aware Loss: 18.209770 ggUf_1kLoss_L2-pt40.jpg
+Content Loss: 68.442612 Color-Aware Loss: 28.606499 ggUf_1kLoss_chroma_L2-pt40.jpg
+ 
+Include BW in final color palette
+Content Loss: 43.916538 Color-Aware Loss: 18.016842 ggUt_1kLoss_L2-pt40.jpg
+Content Loss: 57.141350 Color-Aware Loss: 20.809202 ggUt_1kLoss_chroma_L2-pt40.jpg
+
+Last Failed Reduce Sigma
+Content Loss: 49.889687 Color-Aware Loss: 36.404743 ggUt_1kLoss_L2sigma-pt20.jpg
+Content Loss: 74.736885 Color-Aware Loss: 41.473087 ggUt_1kLoss_chroma_L2-sigma-pt20.jpg
+
+

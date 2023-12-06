@@ -1,0 +1,42 @@
+RUNS 300 INPUT IMAGES  STYLE=femmeNueAssise.jpg, CONTENT=Gatys_NST_Paper_ImageA.jpg
+SIGMA =0.25 
+EPS = 1e-8
+PALETTE_SIZE = 5
+BLACK_AND_WHITE = FALSE
+
+OPTIMIZER = 'LBFGS', LR = 0.5 #https://pytorch.org/docs/stable/generated/torch.optim.LBFGS.html            		     #lr=LEARNING RATE 
+CONTENT / STYLE DISTANT L2
+COLOR DISTANCE: chroma_L2 or L2
+STYLE LOSS = 1k 100,1k,10k,100k,1000k
+CONTENT LOSS = 1
+IMAGE SIZE 224
+
+VGG19 MODEL WITH DEFAULT WEIGHTS
+Content Loss: 9.116846 Color-Aware Loss: 6.725605 gatysFemme_1hLoss_L2-sigma-pt25.jpg
+Content Loss: 22.282074 Color-Aware Loss: 10.426246 gatysFemme_1kLoss_L2-sigma-pt25.jpg
+Content Loss: 42.623405 Color-Aware Loss: 42.234352 gatysFemme_10kLoss_L2-sigma-pt25.jpg
+Content Loss: 61.489258 Color-Aware Loss: 381.446014 gatysFemme_100kLoss_L2-sigma-pt25.jpg
+Content Loss: 65.339920 Color-Aware Loss: 3825.043213 gatysFemme_1000kLoss_L2-sigma-pt25.jpg
+
+Content Loss: 9.657195 Color-Aware Loss: 7.276721 gatysFemme_1hLoss_L2-sigma-pt20.jpg
+Content Loss: 24.813139 Color-Aware Loss: 13.125625 gatysFemme_1kLoss_L2-sigma-pt20.jpg
+Content Loss: 51.400887 Color-Aware Loss: 67.102608 gatysFemme_10kLoss_L2-sigma-pt20.jpg
+Content Loss: 69.410538 Color-Aware Loss: 747.741333 gatysFemme_100kLoss_L2-sigma-pt20.jpg
+Content Loss: 70.861557 Color-Aware Loss: 5507.104004 gatysFemme_1000kLoss_L2-sigma-pt20.jpg 
+
+THINK BEST:
+Content Loss: 25.579517 Color-Aware Loss: 26.584766 gatysFemme_10kLoss_chroma_L2-sigma-pt30.jpg
+Content Loss: 39.305439 Color-Aware Loss: 113.408043 gatysFemme_50kLoss_chroma_L2-sigma-pt30
+100 is not as good
+Content Loss: 44.106724 Color-Aware Loss: 228.333527 gatysFemme_100kLoss_chroma_L2-sigma-pt30.jpg
+
+Content Loss: 29.937935 Color-Aware Loss: 25.326931 gatysFemme_10kLoss_L2-sigma-pt40.jpg
+BELOW IS PRETTY GOOD 10K loss chroma L2, no blur sigma 40
+Content Loss: 25.137623 Color-Aware Loss: 26.869133 gatysFemme_10kLoss_chroma_L2-sigma-pt40.jpg
+
+Content Loss: 49.072300 Color-Aware Loss: 157.525085 gatysFemme_10kLoss_L2-sigma-pt40-NoStyleBlur.jpg
+Content Loss: 27.881325 Color-Aware Loss: 43.825684 gatysFemme_10kLoss_chroma_L2-sigma-pt40-NoStyleBlur.jpg
+Content Loss: 64.189415 Color-Aware Loss: 1624.679810 gatysFemme_100kLoss_L2-sigma-pt40-NoStyleBlur.jpg
+Content Loss: 45.956547 Color-Aware Loss: 413.946747 gatysFemme_100kLoss_chroma_L2-sigma-pt40-NoStyleBlur.jpg
+Content Loss: 48.932827 Color-Aware Loss: 460.997955 gatysFemme_100kLoss_L2-sigma-pt90-NoStyleBlur.jpg
+Content Loss: 46.144299 Color-Aware Loss: 426.455627 gatysFemme_100kLoss_chroma_L2-sigma-pt90-NoStyleBlur.jpg
